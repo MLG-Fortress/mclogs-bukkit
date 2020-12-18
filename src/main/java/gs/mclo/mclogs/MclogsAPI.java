@@ -37,6 +37,7 @@ public class MclogsAPI {
 
         //read log to string
         String log = inputStreamToString(LogIS);
+        log.replaceAll("([0-9]{1,3}\\.){3}[0-9]{1,3}", "REDACTED");
 
         //connect to api
         URL url = new URL("https://api.mclo.gs/1/log");
